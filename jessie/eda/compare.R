@@ -1,3 +1,5 @@
-old <- readRDS("/home/jessiejzhou/peregrine-amazon/data/wrangling/aad_v4.rds")
+old <- read.csv("/home/jessiejzhou/peregrine-amazon/data/annual/old_aad.csv")
 new <- readRDS("/home/jessiejzhou/peregrine-amazon/data/annual/aad_2021_forests.rds")
-
+brazil_old <- subset(old, Country == "Brazil")
+brazil_new <- subset(new, Country == "Brazil")
+print(names(brazil_new))
